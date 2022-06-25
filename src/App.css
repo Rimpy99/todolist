@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+.app-container{
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+    padding: 37px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+    font-size: 40px;
+    letter-spacing: 2px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.task-creator{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+.task-creator__input-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-creator__input{
+    width: 500px;
+    font-size: 25px;
+    padding: 10px;
+    margin-right: 15px;
+    border: none;
+    border-bottom: 3px solid var(--blue);
+    opacity: .5;
+    background: transparent;
+    outline: none;
+}
+
+.task-creator__input:focus{
+    opacity: 1;
+}
+
+.task-creator__categories-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-input{
+    display: none;
+}
+
+.category-label{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 22px;
+    color: var(--blue);
+}
+
+.category-1{
+    background-color: var(--green-op-03);
+}
+
+.category-1:hover{
+    background-color: var(--green-op-08);
+}
+
+.category-2{
+    background-color: var(--yellow-op-03);
+}
+
+.category-2:hover{
+    background-color: var(--yellow-op-08);
+}
+
+.category-3{
+    background-color: var(--red-op-03);
+}
+
+.category-3:hover{
+    background-color: var(--red-op-08);
+}
+
+.input-1:checked + .category-1{
+    background-color: var(--green-op-08);
+}
+
+.input-2:checked + .category-2{
+    background-color: var(--yellow-op-08);
+}
+
+.input-3:checked + .category-3{
+    background-color: var(--red-op-08);
+}
+
+.category-1,
+.category-2,
+.category-3,
+.sort-btn{
+    transition: all .2s ease-in-out;
+}
+
+.sort-container{
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 40px;
+    border-bottom: 2px solid var(--blue);
+}
+
+.sort-btn{
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    opacity: .85; 
+}
+
+.sort-btn:hover{
+    opacity: 1;
+}
+
+.task-container{
+    width: min(100%, 1400px);
+    display: flex;
+    justify-content:center;
+    flex-flow: wrap;
+    flex-wrap: wrap;
+}
+
+.input-not-checked{
+    pointer-events: none;
+    opacity: .6;
 }

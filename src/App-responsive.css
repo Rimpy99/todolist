@@ -1,0 +1,21 @@
+@media all and (max-width: 600px){
+    .task-creator__input{
+        width: 80vw;
+        font-size: 15px;
+    }
+
+    .category-label{
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 400px){
+    .task-creator__input{
+        width: 70vw;
+    }
+
+    .task-creator__categories-container{
+        flex-direction: column;
+        height: 120px;
+    }
+}
